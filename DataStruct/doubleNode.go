@@ -70,3 +70,79 @@ func DeleteDoubleHeroNode(head *DoubleHeroNode,id int){
 		fmt.Println("节点不存在")
 	}
 }
+
+func ListDoubleNodeNext(head *DoubleHeroNode){		// 从前往后遍历
+	temp := head
+	if temp.next == nil{
+		fmt.Println("链表为空")
+		return
+	}
+	for{
+		fmt.Printf("[%d %s %s]==>\n",temp.no,temp.name,temp.nickname)
+		temp = temp.next
+		if temp.next == nil{
+			fmt.Printf("[%d %s %s \n]",temp.no,temp.name,temp.nickname)
+			break
+		}
+	}
+}
+
+func ListDoubleNodePre(head *DoubleHeroNode){		// 从后往前遍历
+	temp := head
+	if temp.next == nil{
+		fmt.Println("链表为空")
+		return
+	}
+	for{
+		if temp.next == nil {
+			break
+		}
+		temp = temp.next
+	}
+	for  {
+		fmt.Printf("[%d %s %s]==>\n",temp.no,temp.name,temp.nickname)
+		temp = temp.pre
+		if temp.pre == nil{
+			fmt.Printf("[%d %s %s \n]",temp.no,temp.name,temp.nickname)
+			break
+		}
+	}
+}
+
+func CreatDoubleNode()  {
+	head := &DoubleHeroNode{}
+	hero1 := &DoubleHeroNode{
+		no:1,
+		name: "宋江",
+		nickname: "及时雨",
+	}
+
+	hero2 := &DoubleHeroNode{
+		no:       2,
+		name:     "卢俊义",
+		nickname: "玉麒麟",
+	}
+
+	hero3 := &DoubleHeroNode{
+		no:       3,
+		name:     "林冲",
+		nickname: "豹子头",
+	}
+
+	hero4 := &DoubleHeroNode{
+		no:       4,
+		name:     "吴用",
+		nickname: "智多星",
+	}
+	InsertDoubleHeroNode(head,hero1)
+	InsertDoubleHeroNode(head,hero2)
+	InsertDoubleHeroNode(head,hero3)
+	InsertDoubleHeroNode(head,hero4)
+	ListDoubleNodeNext(head)
+	fmt.Println("逆序打印")
+	ListDoubleNodePre(head)
+	DeleteDoubleHeroNode(head,1)
+	ListDoubleNodeNext(head)
+	fmt.Println("逆序打印")
+	ListDoubleNodePre(head)
+}
