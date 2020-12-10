@@ -16,7 +16,8 @@ func main()  {
 		fmt.Println("4.环形队列")
 		fmt.Println("5.单向链表")
 		fmt.Println("6.双向链表")
-		fmt.Println("7.退出")
+		fmt.Println("7.环形链表")
+		fmt.Println("8.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -33,6 +34,8 @@ func main()  {
 		case 6:
 			DataStruct.CreatDoubleNode()
 		case 7:
+			DataStruct.CreateCricleNode()
+		case 8:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
