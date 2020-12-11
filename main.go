@@ -1,6 +1,7 @@
 package main
 
 import (
+	"com.leetcode/Algorithm"
 	"com.leetcode/DataStruct"
 	"fmt"
 	"os"
@@ -8,6 +9,7 @@ import (
 
 func main()  {
 	var key int
+	arr := [6]int{9,1,5,6,8,1}
 	for  {
 		fmt.Println("请选择功能")
 		fmt.Println("1.普通数组")
@@ -18,7 +20,8 @@ func main()  {
 		fmt.Println("6.双向链表")
 		fmt.Println("7.环形链表")
 		fmt.Println("8.环形链表应用")
-		fmt.Println("9.退出")
+		fmt.Println("9.选择排序")
+		fmt.Println("10.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -39,6 +42,8 @@ func main()  {
 		case 8:
 			DataStruct.PlayGround()
 		case 9:
+			Algorithm.SelectSort(&arr)
+		case 10:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
