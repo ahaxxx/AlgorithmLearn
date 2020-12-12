@@ -10,6 +10,7 @@ import (
 func main()  {
 	var key int
 	arr := [6]int{9,1,5,6,8,1}
+	arr2 := [7]int{9,1,5,6,8,1,10}
 	for  {
 		fmt.Println("请选择功能")
 		fmt.Println("1.普通数组")
@@ -21,7 +22,8 @@ func main()  {
 		fmt.Println("7.环形链表")
 		fmt.Println("8.环形链表应用")
 		fmt.Println("9.选择排序")
-		fmt.Println("10.退出")
+		fmt.Println("10.插入排序")
+		fmt.Println("11.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -44,6 +46,8 @@ func main()  {
 		case 9:
 			Algorithm.SelectSort(&arr)
 		case 10:
+			Algorithm.InsertSort(&arr2)
+		case 11:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
