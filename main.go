@@ -23,7 +23,8 @@ func main()  {
 		fmt.Println("8.环形链表应用")
 		fmt.Println("9.选择排序")
 		fmt.Println("10.插入排序")
-		fmt.Println("11.退出")
+		fmt.Println("11.快速排序")
+		fmt.Println("12.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -48,6 +49,8 @@ func main()  {
 		case 10:
 			Algorithm.InsertSort(&arr2)
 		case 11:
+			Algorithm.QuickSort(0,len(arr2)-1,&arr2)
+		case 12:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
