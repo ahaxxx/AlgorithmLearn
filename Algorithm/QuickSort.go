@@ -8,10 +8,10 @@ func QuickSort(left int,right int,arr *[7]int){
 	pivot := arr[(left+right)/2]
 	for l<r {
 		for arr[l] < pivot{
-			r++
+			l++
 		}
 		for arr[r] > pivot{
-			l--
+			r--
 		}
 		if l >=r {
 			break
@@ -21,7 +21,7 @@ func QuickSort(left int,right int,arr *[7]int){
 			r--
 		}
 		if arr[r] == pivot {
-			r++
+			l++
 		}
 	}
 	if l == r{
@@ -34,5 +34,11 @@ func QuickSort(left int,right int,arr *[7]int){
 	if left > l{
 		QuickSort(l,right,arr)
 	}
-	fmt.Printf("%v\n" ,*arr)
+}
+
+func UseQuickSort(){
+	arr2 := [7]int{9,1,5,6,8,1,10}
+	fmt.Println(arr2)
+	QuickSort(0,len(arr2) - 1,&arr2)
+	fmt.Println(arr2)
 }

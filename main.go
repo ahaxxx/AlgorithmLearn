@@ -49,7 +49,7 @@ func main()  {
 		case 10:
 			Algorithm.InsertSort(&arr2)
 		case 11:
-			Algorithm.QuickSort(0,len(arr2)-1,&arr2)
+			Algorithm.UseQuickSort()
 		case 12:
 			os.Exit(0)
 		default:
