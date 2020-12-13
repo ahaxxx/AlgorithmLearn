@@ -24,7 +24,8 @@ func main()  {
 		fmt.Println("9.选择排序")
 		fmt.Println("10.插入排序")
 		fmt.Println("11.快速排序")
-		fmt.Println("12.退出")
+		fmt.Println("12.栈")
+		fmt.Println("13.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -51,6 +52,8 @@ func main()  {
 		case 11:
 			Algorithm.UseQuickSort()
 		case 12:
+			DataStruct.CreatStack()
+		case 13:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
