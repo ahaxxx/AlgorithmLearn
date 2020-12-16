@@ -40,7 +40,7 @@ func (this *Stack) Priority(oper int) int{
 	return res
 }
 
-func calculator(){
+func Calculator(){
 	numStack := &Stack{
 		MaxTop: 20,
 		Top:	-1,
@@ -82,9 +82,27 @@ func calculator(){
 				numStack.Push(int(val))
 			}else {
 				if opeStack.IsOper(int([]byte(exp[index+1:index+2])[0])){
-
+					val, _ := strconv.ParseInt(keepNum, 10, 64)
+					numStack.Push(int(val))
+					keepNum = ""
 				}
 			}
 		}
+		if index + 1 == len(exp){
+			break
+		}
+		index ++
 	}
+	for {
+		if opeStack.Top == -1{
+			break
+		}
+		num1,_ = numStack.Pop()
+		num2,_ = numStack.Pop()
+		oper,_ = opeStack.Pop()
+		result = opeStack.Cal(num1,num2,oper)
+		numStack.Push(result)
+	}
+	res, _ := numStack.Pop()
+	fmt.Printf("表达式%s = %v", exp, res)
 }
