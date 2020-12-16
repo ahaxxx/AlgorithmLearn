@@ -26,7 +26,8 @@ func main()  {
 		fmt.Println("11.快速排序")
 		fmt.Println("12.栈")
 		fmt.Println("13.栈应用")
-		fmt.Println("14.退出")
+		fmt.Println("14.哈希表")
+		fmt.Println("15.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -57,6 +58,8 @@ func main()  {
 		case 13:
 			DataStruct.Calculator()
 		case 14:
+			DataStruct.CreateHashTable()
+		case 15:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
