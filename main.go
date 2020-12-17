@@ -27,7 +27,8 @@ func main()  {
 		fmt.Println("12.栈")
 		fmt.Println("13.栈应用")
 		fmt.Println("14.哈希表")
-		fmt.Println("15.退出")
+		fmt.Println("15.二叉树")
+		fmt.Println("16.退出")
 		fmt.Println("请输入：")
 		fmt.Scanln(&key)
 		switch key {
@@ -60,6 +61,8 @@ func main()  {
 		case 14:
 			DataStruct.CreateHashTable()
 		case 15:
+			DataStruct.CreateBinaryTree()
+		case 16:
 			os.Exit(0)
 		default:
 			fmt.Println("请检查输入后重新输入")
