@@ -30,10 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="01ed092d-6475-4c5d-b912-156137e22f63" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/DataStruct/BinaryTree.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataStruct/leetcode/circularQueue.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +96,10 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
+    <state x="1011" y="376" key="#HTTP_Proxy" timestamp="1608367516196">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1011" y="376" key="#HTTP_Proxy/2560.0.1536.832/0.0.2560.1400@0.0.2560.1400" timestamp="1608367516196" />
     <state x="938" y="478" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607760101779">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
