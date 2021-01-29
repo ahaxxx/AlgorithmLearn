@@ -1,6 +1,6 @@
 package main
 
-import "com.leetcode/DataStruct/leetcode"
+import "com.leetcode/leetcode"
 
 func main()  {
 	leetcode.IsPalindrome(1000)
